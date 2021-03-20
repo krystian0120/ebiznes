@@ -2,7 +2,9 @@ FROM ubuntu:20.04
 
 RUN apt-get update \
     && apt-get install -y apt-utils sudo wget -f \
-    && apt-get upgrade -y
+    && echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
+    && apt-get upgrade -y \
+    && apt-get install -y sudo wget -f
 RUN useradd -m user \
     && usermod -aG sudo user \
     && passwd -d user
