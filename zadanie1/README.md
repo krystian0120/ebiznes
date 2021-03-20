@@ -6,7 +6,7 @@ Obraz Dockera zawierający:
 - npm
 - sbt
 
-Dodatkowo 2 porty dla React oraz Play.
+Dodatkowo 2 porty dla React oraz Play, a także volume do wymiany danych.
 
 ## Link do dockerhub:
 https://hub.docker.com/r/krystian0120/zadanie1
