@@ -1,6 +1,8 @@
 FROM ubuntu:20.04
 
-RUN apt-get update && apt-get install -y apt-utils sudo wget -f
+RUN apt-get update \
+    && apt-get install -y apt-utils sudo wget -f \
+    && apt-get upgrade -y
 RUN useradd -m user \
     && usermod -aG sudo user \
     && passwd -d user
@@ -14,7 +16,8 @@ RUN sudo apt-get install -y openjdk-8-jdk \
 
 # Scala 2.12.13
 RUN wget https://downloads.lightbend.com/scala/2.12.13/scala-2.12.13.deb \
-    && sudo dpkg -i ./scala-2.12.13.deb
+    && sudo dpkg -i ./scala-2.12.13.deb \
+    && rm scala-2.12.13.deb
 
 # Node.js 15 and npm 7
 RUN curl -fsSL https://deb.nodesource.com/setup_15.x | sudo -E bash - \
