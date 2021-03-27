@@ -4,7 +4,8 @@ RUN apt-get update \
     && apt-get install -y apt-utils sudo wget -f \
     && echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
     && apt-get upgrade -y \
-    && apt-get install -y sudo wget -f
+    && apt-get install -y sudo wget -f \
+    && apt-get update
 RUN useradd -m user \
     && usermod -aG sudo user \
     && passwd -d user
@@ -21,9 +22,12 @@ RUN wget https://downloads.lightbend.com/scala/2.12.13/scala-2.12.13.deb \
     && sudo dpkg -i ./scala-2.12.13.deb \
     && rm scala-2.12.13.deb
 
-# Node.js 15 and npm 7
+# Node.js 15 and npm 7, update npm to the latest version
 RUN curl -fsSL https://deb.nodesource.com/setup_15.x | sudo -E bash - \
-    && sudo apt-get install -y nodejs
+    && sudo apt-get install -y nodejs \
+    && sudo npm update -g \
+    && sudo npm install -g npm@latest \
+    && sudo npm install -g npm-check-updates
 
 # sbt
 RUN echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list \
