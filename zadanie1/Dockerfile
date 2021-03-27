@@ -5,7 +5,7 @@ RUN apt-get update \
     && echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
     && apt-get upgrade -y \
     && apt-get install -y sudo wget -f \
-    && apt-get update
+    && apt-get dist-upgrade -y
 RUN useradd -m user \
     && usermod -aG sudo user \
     && passwd -d user
