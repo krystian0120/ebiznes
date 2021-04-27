@@ -11,43 +11,71 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 
 # User CRUD
-GET     /user/get/:id               controllers.UserController.getUser()
+GET     /user/get/:id               controllers.UserController.getUser(id)
 GET     /user/all                   controllers.UserController.getAllUsers()
 POST    /user/create                controllers.UserController.createUser()
-PUT     /user/update/:id            controllers.UserController.updateUser()
-DELETE  /user/delete/:id            controllers.UserController.deleteUser()
+PUT     /user/update/:id            controllers.UserController.updateUser(id)
+DELETE  /user/delete/:id            controllers.UserController.deleteUser(id)
 
 # Car Make CRUD
-GET     /car-make/get/:id           controllers.CarMakeController.getCarMake()
+GET     /car-make/get/:id           controllers.CarMakeController.getCarMake(id)
 GET     /car-make/all               controllers.CarMakeController.getAllCarMakes()
 POST    /car-make/create            controllers.CarMakeController.createCarMake()
-PUT     /car-make/update/:id        controllers.CarMakeController.updateCarMake()
-DELETE  /car-make/delete/:id        controllers.CarMakeController.deleteCarMake()
+PUT     /car-make/update/:id        controllers.CarMakeController.updateCarMake(id)
+DELETE  /car-make/delete/:id        controllers.CarMakeController.deleteCarMake(id)
 
 # Car Model CRUD
-GET     /car-model/get/:id          controllers.CarModelController.getCarModel()
+GET     /car-model/get/:id          controllers.CarModelController.getCarModel(id)
 GET     /car-model/all              controllers.CarModelController.getAllCarModels()
 POST    /car-model/create           controllers.CarModelController.createCarModel()
-PUT     /car-model/update/:id       controllers.CarModelController.updateCarModel()
-DELETE  /car-model/delete/:id       controllers.CarModelController.deleteCarModel()
+PUT     /car-model/update/:id       controllers.CarModelController.updateCarModel(id)
+DELETE  /car-model/delete/:id       controllers.CarModelController.deleteCarModel(id)
 
 # Car Version CRUD
-GET     /car-version/get/:id        controllers.CarVersionController.getCarVersion()
+GET     /car-version/get/:id        controllers.CarVersionController.getCarVersion(id)
 GET     /car-version/all            controllers.CarVersionController.getAllCarVersions()
 POST    /car-version/create         controllers.CarVersionController.createCarVersion()
-PUT     /car-version/update/:id     controllers.CarVersionController.updateCarVersion()
-DELETE  /car-version/delete/:id     controllers.CarVersionController.deleteCarVersion()
+PUT     /car-version/update/:id     controllers.CarVersionController.updateCarVersion(id)
+DELETE  /car-version/delete/:id     controllers.CarVersionController.deleteCarVersion(id)
 
 # Car Part CRUD
-GET     /part/get/:id               controllers.PartController.getPart()
+GET     /part/get/:id               controllers.PartController.getPart(id)
 GET     /part/all                   controllers.PartController.getAllParts()
 POST    /part/create                controllers.PartController.createPart()
-PUT     /part/update/:id            controllers.PartController.updatePart()
-DELETE  /part/delete/:id            controllers.PartController.deletePart()
+PUT     /part/update/:id            controllers.PartController.updatePart(id)
+DELETE  /part/delete/:id            controllers.PartController.deletePart(id)
+
+# Car Part CRUD
+GET     /part-make/get/:id          controllers.PartMakeController.getPartMake(id)
+GET     /part-make/all              controllers.PartMakeController.getAllPartMakes()
+POST    /part-make/create           controllers.PartMakeController.createPartMake()
+PUT     /part-make/update/:id       controllers.PartMakeController.updatePartMake(id)
+DELETE  /part-make/delete/:id       controllers.PartMakeController.deletePartMake(id)
 
 # Car Part Category CRUD
-GET     /part-category/get/:id      controllers.PartCategoryController.getPartCategory()
+GET     /part-category/get/:id      controllers.PartCategoryController.getPartCategory(id)
 GET     /part-category/all          controllers.PartCategoryController.getAllPartCategories()
 POST    /part-category/create       controllers.PartCategoryController.createPartCategory()
-PUT     /part-category/update/:id   controllers.PartCategoryController.updatePartCategory()
-DELETE  /part-category/delete/:id   controllers.PartCategoryController.deletePartCategory()
+PUT     /part-category/update/:id   controllers.PartCategoryController.updatePartCategory(id)
+DELETE  /part-category/delete/:id   controllers.PartCategoryController.deletePartCategory(id)
+
+# Order CRUD
+GET     /order/get/:id              controllers.OrderController.getOrder(id)
+GET     /order/all                  controllers.OrderController.getAllOrders()
+POST    /order/create               controllers.OrderController.createOrder()
+PUT     /order/update/:id           controllers.OrderController.updateOrder(id)
+DELETE  /order/delete/:id           controllers.OrderController.deleteOrder(id)
+
+# Payment CRUD
+GET     /payment/get/:id            controllers.PaymentController.getPayment(id)
+GET     /payment/all                controllers.PaymentController.getAllPayments()
+POST    /payment/create             controllers.PaymentController.createPayment()
+PUT     /payment/update/:id         controllers.PaymentController.updatePayment(id)
+DELETE  /payment/delete/:id         controllers.PaymentController.deletePayment(id)
+
+# Car Accessories CRUD
+GET     /accessories/get/:id            controllers.AccessoriesController.getAccessory(id)
+GET     /accessories/all                controllers.AccessoriesController.getAllAccessories()
+POST    /accessories/create             controllers.AccessoriesController.createAccessory()
+PUT     /accessories/update/:id         controllers.AccessoriesController.updateAccessory(id)
+DELETE  /accessories/delete/:id         controllers.AccessoriesController.deleteAccessory(id)

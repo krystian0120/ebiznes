@@ -4,9 +4,9 @@ import javax.inject.Singleton
 
 @Singleton
 class CarVersionController {
-  def getCarVersion() {}
-  def getAllCarVersions() {}
-  def createCarVersion() {}
-  def updateCarVersion() {}
-  def deleteCarVersion() {}
+  def getCarVersion(id: String) = {}
+  def getAllCarVersions() = {}
+  def createCarVersion() = {}
+  def updateCarVersion(id: String) = {}
+  def deleteCarVersion(id: String) = {}
 }

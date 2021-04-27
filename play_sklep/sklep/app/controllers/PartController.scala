@@ -5,9 +5,9 @@ import javax.inject.Singleton
 
 @Singleton
 class PartController {
-  def getPart() {}
-  def getAllParts() {}
-  def createPart() {}
-  def updatePart() {}
-  def deletePart() {}
+  def getPart(id: String) = {}
+  def getAllParts() = {}
+  def createPart() = {}
+  def updatePart(id: String) = {}
+  def deletePart(id: String) = {}
 }
