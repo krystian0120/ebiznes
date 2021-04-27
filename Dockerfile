@@ -22,8 +22,8 @@ RUN wget https://downloads.lightbend.com/scala/2.12.13/scala-2.12.13.deb \
     && sudo dpkg -i ./scala-2.12.13.deb \
     && rm scala-2.12.13.deb
 
-# Node.js 15 and npm 7, update npm to the latest version
-RUN curl -fsSL https://deb.nodesource.com/setup_15.x | sudo -E bash - \
+# Node.js 16 and npm 7, update npm to the latest version
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - \
     && sudo apt-get install -y nodejs \
     && sudo npm update -g \
     && sudo npm install -g npm@latest \
