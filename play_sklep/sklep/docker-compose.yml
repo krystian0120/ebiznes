@@ -1,11 +1,12 @@
 version: '3'
 services:
   ebiznes:
+    network_mode: host
     build: .
     ports:
       - 12345:9000
       - 12346:3000
     volumes:
-      - .:/home/data/
-    working_dir: /home/data/
+      - .:/home/data/play_sklep/sklep
+    working_dir: /home/data/play_sklep/sklep
     command: sbt run

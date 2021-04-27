@@ -8,3 +8,25 @@ GET     /                           controllers.HomeController.index()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+# User CRUD
+GET     /user/get/:id               controllers.UserController.getUser()
+GET     /user/all                   controllers.UserController.getAllUsers()
+POST    /user/create                controllers.UserController.createUser()
+PUT     /user/update/:id            controllers.UserController.updateUser()
+DELETE  /user/delete/:id            controllers.UserController.deleteUser()
+
+# Car Make CRUD
+GET     /car-make/get/:id           controllers.CarMakeController.getCarMake()
+GET     /car-make/all               controllers.CarMakeController.getAllCarMakes()
+POST    /car-make/create            controllers.CarMakeController.createCarMake()
+PUT     /car-make/update/:id        controllers.CarMakeController.updateCarMake()
+DELETE  /car-make/delete/:id        controllers.CarMakeController.deleteCarMake()
+
+# Car Model CRUD
+GET     /car-model/get/:id           controllers.CarModelController.getCarModel()
+GET     /car-model/all               controllers.CarModelController.getAllCarModels()
+POST    /car-model/create            controllers.CarModelController.createCarModel()
+PUT     /car-model/update/:id        controllers.CarModelController.updateCarModel()
+DELETE  /car-model/delete/:id        controllers.CarModelController.deleteCarModel()
