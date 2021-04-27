@@ -30,3 +30,19 @@ GET     /car-model/all               controllers.CarModelController.getAllCarMod
 POST    /car-model/create            controllers.CarModelController.createCarModel()
 PUT     /car-model/update/:id        controllers.CarModelController.updateCarModel()
 DELETE  /car-model/delete/:id        controllers.CarModelController.deleteCarModel()
+
+# Car Version CRUD
+GET     /car-version/get/:id           controllers.CarVersionController.getCarVersion()
+GET     /car-version/all               controllers.CarVersionController.getAllCarVersions()
+POST    /car-version/create            controllers.CarVersionController.createCarVersion()
+PUT     /car-version/update/:id        controllers.CarVersionController.updateCarVersion()
+DELETE  /car-version/delete/:id        controllers.CarVersionController.deleteCarVersion()
+
+# Car Part CRUD
+GET     /part/get/:id           controllers.PartController.getPart()
+GET     /part/all               controllers.PartController.getAllParts()
+POST    /part/create            controllers.PartController.createPart()
+PUT     /part/update/:id        controllers.PartController.updatePart()
+DELETE  /part/delete/:id        controllers.PartController.deletePart()
+
+
