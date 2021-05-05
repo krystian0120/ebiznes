@@ -1,7 +1,6 @@
 version: '3'
 services:
   ebiznes:
-    network_mode: host
     build: .
     ports:
       - 12345:9000
@@ -9,4 +8,4 @@ services:
     volumes:
       - .:/home/data/play_sklep/sklep
     working_dir: /home/data/play_sklep/sklep
-    command: sbt run
+    command: bash -c "sbt run"
